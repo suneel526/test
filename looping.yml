@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+    - name: looping concepts
+      apt:
+       name: "{{ item }}" 
+       state: present
+      loop:
+        - git
+        - wget 
+        - tree 
+      when: ansible_os_family == "Debian"
