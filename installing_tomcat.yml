@@ -4,8 +4,8 @@
   tasks: 
   - name: installing tomcat
     apt: 
-     name: apache2
-     state: present
+      name: apache2
+      state: present
   when: ansible_os_family == "Debian"
    
 - name: starting apache2 service
